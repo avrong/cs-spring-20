@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+html {
+    position: relative;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #1b1b1b;
+}
+
+a {
+    color: #000000;
+}
+
+/* a:visited {
+    color: #6d6d6d;
+} */
+
+a:hover {
+    color: #003c8f;
+}
+
+.header {
+    margin: 1rem auto;
+    padding: 1rem 3rem;
+    max-width: 1280px;
+}
+
+.header h1.title small.subtitle {
+    display: block;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.header h1.title:before {
+    content: "📆 ";
+    position: relative;
+    margin-left: -38px;
+}
+
+.content {
+    margin: 1rem auto;
+    padding: 1rem 3rem;
+    max-width: 1280px;
+}
+
+.footer {
+    margin: 1rem auto;
+    padding: 1rem 3rem;
+    max-width: 1280px;
+    color: #6d6d6d;
+}
+
+.month {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.month h2 {
+    flex-basis: 100%;
+    margin-bottom: 0;
+    color: #1565c0;
+}
+
+.month .day {
+    margin-right: 1rem;
+    flex-direction: column;
+    width: 18rem;
+}
+
+.month .day h3 {
+    flex-basis: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #5e92f3;
+}
+
+.month .day a {
+    display: flex;
+    margin-bottom: .3rem;
+}
+
+.search {
+    padding: 0.3rem;
+    width: 15rem;
+}
