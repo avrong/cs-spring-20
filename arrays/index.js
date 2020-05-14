@@ -34,7 +34,7 @@ let makeTableFromCountry = (c) => {
                 }
 
                 ${
-                    c[7].map((v, i) => {
+                    c[7].sort((a, b) => a[2] < b[2] ? -1 : a[2] > b[2] ? 1 : 0).map((v, i) => {
                         return `<tr>
                                     <td><b>${i == 0 ? "Литературные произведения" : ""}</b></td>
                                     <td>${i+1}. ${v[0]} «${v[1]}» (${v[2]})</td>
