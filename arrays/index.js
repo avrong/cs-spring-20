@@ -10,7 +10,7 @@ let makeTableFromCountry = (c) => {
                 </thead>
 
                 <tr>
-                    <td>
+                    <td colspan="2">
                         <table width="75%" style="margin: 0 auto;">
                             ${
                                 baseParams.map((v, i) => {
@@ -24,24 +24,20 @@ let makeTableFromCountry = (c) => {
                     </td>
                 </tr>
 
-                <tr>
-                    <td colspan="2" style="text-align: center;"><b>Географические объекты:</b></td>
-                </tr>
                 ${
                     c[6].map((v, i) => {
-                        return `<tr style="text-align: center;">
-                                    <td colspan="2">${v}</td>
+                        return `<tr>
+                                    <td><b>${i == 0 ? "Географические объекты" : ""}</b></td>
+                                    <td>${v}</td>
                                 </tr>`;
                     }).join('\n')
                 }
 
-                <tr>
-                    <td colspan="2" style="text-align: center;"><b>Литературные произведения:</b></td>
-                </tr>
                 ${
                     c[7].map((v, i) => {
-                        return `<tr style="text-align: center;">
-                                    <td colspan="2">${v[0]} «${v[1]}» (${v[2]})</td>
+                        return `<tr>
+                                    <td><b>${i == 0 ? "Литературные произведения" : ""}</b></td>
+                                    <td>${v[0]} «${v[1]}» (${v[2]})</td>
                                 </tr>`;
                     }).join('\n')
                 }
