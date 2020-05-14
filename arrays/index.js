@@ -56,7 +56,7 @@ let makeTableFromCountry = (c) => {
                         </tr></table>
                     </td>
                 </tr>
-            </table>`
+            </table>`;
 };
 
 countries.forEach((country) => {
