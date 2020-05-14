@@ -28,7 +28,7 @@ let makeTableFromCountry = (c) => {
                     c[6].map((v, i) => {
                         return `<tr>
                                     <td><b>${i == 0 ? "Географические объекты" : ""}</b></td>
-                                    <td>${v}</td>
+                                    <td>${i+1}. ${v}</td>
                                 </tr>`;
                     }).join('\n')
                 }
@@ -37,7 +37,7 @@ let makeTableFromCountry = (c) => {
                     c[7].map((v, i) => {
                         return `<tr>
                                     <td><b>${i == 0 ? "Литературные произведения" : ""}</b></td>
-                                    <td>${v[0]} «${v[1]}» (${v[2]})</td>
+                                    <td>${i+1}. ${v[0]} «${v[1]}» (${v[2]})</td>
                                 </tr>`;
                     }).join('\n')
                 }
