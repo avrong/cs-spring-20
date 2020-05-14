@@ -1,5 +1,5 @@
-let makeTableFromCountry = (c) => {
-    let baseParams = ['Континент', 'Часть света', 'Разница во времени', 'Денежная единица'];
+const makeTableFromCountry = (c) => {
+    const baseParams = ['Континент', 'Часть света', 'Разница во времени', 'Денежная единица'];
     return `<table width="100%" style="margin-bottom: 2em;">
                 <thead>
                     <tr>
@@ -58,6 +58,44 @@ let makeTableFromCountry = (c) => {
                 </tr>
             </table>`;
 };
+
+const makeTimer = () => {
+    const date = new Date();
+    const studyStartDate = new Date(2020, 09, 01);
+    const diff = Math.floor((studyStartDate - date) / 1000);
+
+    const seconds = Math.floor(diff % 60);
+    const minutes = Math.floor(diff % (60 * 60) / 60);
+    const hours = Math.floor(diff % (60 * 60 * 24) / (60 * 60));
+    const days = Math.floor(diff / (60 * 60 * 24));
+
+    return `<table style="margin: 0 auto; width: 300px;">
+                <tr style="text-align: center;">
+                    <td colspan="4"><b>До начала 2020 учебного года</b></td>
+                </tr>
+                <tr style="text-align: center; font-size: 20px;">
+                    <td>${days}</td>
+                    <td>${hours}</td>
+                    <td>${minutes}</td>
+                    <td>${seconds}</td>
+                </tr>
+                <tr style="text-align: center;">
+                    <td>дней</td>
+                    <td>часов</td>
+                    <td>минут</td>
+                    <td>секунд</td>
+                </tr>
+            </table>`;
+};
+
+const showTimer = () => {
+    document.getElementById('timer').innerHTML = makeTimer();
+};
+
+showTimer();
+setInterval(() => {
+    showTimer();
+}, 1000);
 
 countries.forEach((country) => {
     return document.getElementById('content').innerHTML += makeTableFromCountry(country);
