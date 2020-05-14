@@ -93,9 +93,7 @@ const showTimer = () => {
 };
 
 showTimer();
-setInterval(() => {
-    showTimer();
-}, 1000);
+setInterval(showTimer, 1000);
 
 countries.forEach((country) => {
     return document.getElementById('content').innerHTML += makeTableFromCountry(country);
