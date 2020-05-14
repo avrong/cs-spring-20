@@ -16,7 +16,7 @@ let makeTableFromCountry = (c) => {
                                 baseParams.map((v, i) => {
                                     return `<tr>
                                                 <td><b>${v}</b></td>
-                                                <td>${c[i]}</td>
+                                                <td>${c[i+2]}</td>
                                             </tr>`;
                                 }).join('\n')
                             }
