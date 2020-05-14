@@ -61,7 +61,7 @@ const makeTableFromCountry = (c) => {
 
 const makeTimer = () => {
     const date = new Date();
-    const studyStartDate = new Date(2020, 09, 01);
+    const studyStartDate = new Date('2020-09-01');
     const diff = Math.floor((studyStartDate - date) / 1000);
 
     const seconds = Math.floor(diff % 60);
